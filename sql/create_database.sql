@@ -13,3 +13,13 @@ SIZE = 5 MB,
 MAXSIZE = 25 MB,
 FILEGROWTH = 5 MB);
 GO
+
+CREATE TABLE Clients (
+  ClientID int IDENTITY (1, 1) PRIMARY KEY,
+  FirstName varchar(50) NOT NULL,
+  LastName varchar(50),
+  City varchar(50)
+);
+
+INSERT INTO Clients (FirstName, LastName, City)
+  VALUES ('First name', 'Last name', NULL)
