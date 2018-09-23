@@ -15,7 +15,7 @@ FILEGROWTH = 5 MB);
 GO
 
 CREATE TABLE Clients (
-  ClientID int IDENTITY (1, 1) PRIMARY KEY,
+  ClientID int IDENTITY PRIMARY KEY,
   FirstName varchar(50) NOT NULL,
   LastName varchar(50),
   City varchar(50)
@@ -23,3 +23,5 @@ CREATE TABLE Clients (
 
 INSERT INTO Clients (FirstName, LastName, City)
   VALUES ('First name', 'Last name', NULL)
+
+CREATE UNIQUE INDEX ix_uq_first_name ON Clients (FirstName)
