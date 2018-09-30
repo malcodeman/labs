@@ -44,3 +44,16 @@ EXEC Clients_Insert @FirstName = 'Jane',
                     @City = 'Chicago',
                     @LastName = 'Doe'
 GO
+
+CREATE VIEW view_clients
+AS
+SELECT
+  CONCAT(FirstName, ' ', LastName) AS Name,
+  City
+FROM Clients
+GO
+
+SELECT
+  Name,
+  City
+FROM view_clients
